@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="../static/styles/home.css" /> 
+    <title>Homepage Design</title>
+
+    
+    
+
+    
+
+    <style>
+        @import url('https://fonts.googleapis.com/css>family=Carter+One|Courgette');
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container animated fadeInDown">
+            <h1 style="color: rgb(37, 9, 63); margin:10px 40px">CRS</h1>
+            <div class="menu_absolute">
+                <a href="" class="menu-item">HOME</a>
+                <a href="/analysis" class="menu-item">ANALYSIS</a>
+               
+            </div>
+        </div>
+    </header>
+    <hr/>
+    <div class="box">
+        <div class="left">
+
+        <div class="bar">
+          <h3>Welcome to Crop Recommendation System</h3>
+          <p class="content" style="text-align: justify;">
+            Agriculture in India plays a predominant role in economy and employment.
+             The common problem existing among the Indian farmers are they don't choose the right crop based on their soil requirements.
+            Due to this they face a serious setback in productivity. This problem of the farmers has been addressed through precision agriculture.
+             Precision agriculture is a modern farming technique that uses research data of soil characteristics, soil types,  crop yield data collection and suggests the farmers the right crop based on their site-specific parameters.
+            We can recommend crops by looking at certain climatic factors and general information about the conditions to be taken care of while growing different crops.This reduces the wrong choice on a crop and increase in productivity.
+        </p>
+        </div>
+        
+
+        </div>
+        <div class="right">
+            <form  action="{{ url_for('predict')}}"method="post">           
+                
+            <div class="form">
+                <div class="inp">
+                    <input type="number" min="0" max="140" name="Nitrogen" placeholder="Ratio of Nitrogen"
+                        required="required" />
+
+                </div>
+                <div class="inp">
+                    <input type="number" min="5" max="145" name="Phosphorous" placeholder="Ratio of Phosphorous"
+                        required="required" />
+
+                </div>
+                <div class="inp">
+                    <input type="number" min="5" max="205" name="Potassium" placeholder="Ratio of Potassium"
+                        required="required" />
+
+                </div>
+                <div class="inp">
+                    <input type="number" min="8" max="45" name="Temperature" placeholder="Temperature in Celsius"
+                        required="required" />
+
+                </div>
+                <div class="inp">
+                    <input type="number" min="14" max="100" name="Humidity" placeholder="Relative Humidity"
+                        required="required" />
+
+
+                </div>
+                <div class="inp">
+                    <input type="number" min="0" max="14" name="PH" placeholder="PH value of soil"
+                        required="required" />
+
+                </div>
+                <div class="inp">
+                    <input type="number" min="20" max="300" name="Rainfall" placeholder="Rainfall in Millimeter"
+                        required="required" />
+
+                </div>
+                <div class="inp">
+                    <button type="submit" class="btn">Predict</button>
+                </div>
+                
+                
+              
+            </div>
+            <p class="prediction_text" style="text-align: justify;" >
+                &nbsp&nbsp{{ prediction_text }}
+            </p>
+        </div>
+        
+    </form>
+    </div>
+
+
+
+</body>
+
+
+</html>

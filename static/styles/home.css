@@ -1,0 +1,121 @@
+*{
+    margin:0px;
+}
+
+body{
+    /* background-color: rgb(245, 17, 17); */
+    background-image: url("../styles/crop.jpg");
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.menu_absolute{
+    margin-left: 200px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+  
+}
+.menu_absolute .menu-item{
+    font-size: 17px;
+    font-family: 'Cambria Math', cursive;
+    padding-right: 19px;
+    padding-left: 19px;
+    padding-top: 3px;
+    padding-bottom: 11px;
+    text-decoration: none;
+    color: rgb(74, 16, 77);
+  }
+  .menu_absolute .menu-item:hover{
+    background-color: rgb(146, 55, 182);
+    border-radius: 10px;
+    color: white;
+    transition: .2sec;
+    padding-right: 19px;
+    padding-left: 19px;
+    padding-top: 3px;
+  }
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+    position: fixed;
+}
+.box .left{
+    width:1000px;
+    height:1000px;
+    /* background-color: rgb(27, 231, 27); */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+}
+hr{
+   background-color: rgb(230, 230, 230);
+   text-decoration: none;
+}
+.box .left .bar{
+    width:900px;
+    height:60px;
+    background-color: rgb(61, 61, 61);
+    margin-left:20px;
+}
+.box .left .bar h3{
+    color: white;
+    text-align: center;
+    margin-top:10px;
+}
+.box .left .bar p{
+    color: rgb(80, 78, 78);
+    text-align: center;
+    margin-top:38px;
+    font-size: 20px;
+
+}
+.box .right{
+    width:380px;
+    height:1000px;
+    /* background-color: rgb(85, 37, 218); */
+
+
+}
+
+ p{
+    font-size: 30px;
+    color: rgb(31, 13, 46);
+margin-left: 20px;
+}
+
+
+.form input{
+    width:300px;
+    height:40px;
+    background-color: rgb(255, 255, 255);
+    border-style: hidden;
+    border-radius: 8px;
+    padding-left: 20px;
+
+}
+.form .inp{
+    margin-top: 10px;
+    color: black;
+}
+
+button{
+    width:300px;
+    height:40px;
+    background-color: rgb(52, 28, 92);
+    border-style: hidden;
+    border-radius: 10px;
+    color:white;
+    cursor: pointer;
+    margin-left:10px;
+    margin-top: 20px;
+}
+button:hover{
+    background-color: rgb(124, 38, 194);
+}
+.prediction_text
+{
+ font-size: 20px;   
+ margin-left:5px;
+ margin-top: 20px;
+}
